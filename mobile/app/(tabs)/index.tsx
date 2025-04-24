@@ -1,55 +1,91 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, Button } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Collapsible } from '@/components/Collapsible';
 
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#004aad', dark: '#004aad' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={require('@/assets/images/logo.png')}
           style={styles.reactLogo}
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">seja bom vindo</ThemedText>
-        <HelloWave />
-      </ThemedView>
+        <ThemedText type="title">Boa Tarde, User!</ThemedText>
+        </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+        <ThemedText type="subtitle">Saldo: R$1.000,00</ThemedText>
+      </ThemedView>
+
+      <Button color={'#336ab4'} 
+        onPress={() => {console.log('You tapped the button!');}}
+        title="ACESSAR EXTRATO                                   >"/>
+
+      <ThemedView style={styles.stepContainer}>
         <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
+          o que você deseja fazer?
         </ThemedText>
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
+
+      <Button color={'#004aad'} 
+        onPress={() => {console.log('You tapped the button!');}}
+        title="⤿TRANSFERIR VIA PIX"/>
+
+<Button color={'#004aad'} 
+        onPress={() => {console.log('You tapped the button!');}}
+        title="⤿PAGAR"/>
+
+<Button color={'#004aad'} 
+        onPress={() => {console.log('You tapped the button!');}}
+        title="⤿TRANSFERIR"/>
+
+<Button color={'#004aad'} 
+        onPress={() => {console.log('You tapped the button!');}}
+        title="⤿DEPOSITAR"/>
+
+<ThemedView></ThemedView>
+
+<ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">                SEUS CARTÕES</ThemedText>
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
+      
+      <Collapsible title="cartão virtual ₊⊹">
         <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+          compre online com o seu saldo gigipix!!
         </ThemedText>
-      </ThemedView>
+
+        <ThemedText></ThemedText>
+
+        <ThemedText>
+        <Button color={'#004aad'} 
+        onPress={() => {console.log('You tapped the button!');}}
+        title="acessar"/>
+        </ThemedText>
+
+      </Collapsible>
+
+      <Collapsible title="cartão físico ₊⊹">
+        <ThemedText>
+          compre na hora com o seu saldo gigipix!!
+        </ThemedText>
+
+        <ThemedText></ThemedText>
+
+        <ThemedText>
+        <Button color={'#004aad'} 
+        onPress={() => {console.log('You tapped the button!');}}
+        title="acessar"/>
+        </ThemedText>
+
+      </Collapsible>
+
     </ParallaxScrollView>
   );
 }
@@ -65,8 +101,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
-    height: 178,
-    width: 290,
+    height: 220,
+    width: 390,
     bottom: 0,
     left: 0,
     position: 'absolute',
