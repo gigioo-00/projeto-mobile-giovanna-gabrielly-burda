@@ -31,7 +31,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'conta',
-          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="person" color="#004aad" />,
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="person" color={color} />,
         }}
       />
       <Tabs.Screen
