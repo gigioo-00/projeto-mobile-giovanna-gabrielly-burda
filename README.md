@@ -12,7 +12,7 @@ Este projeto tem como principal objetivo criar uma interface de um banco digital
 
 ## ➜ PÁGINA 1 (conta/home): ₊⊹
 
-![IMG1](./mobile/assets/images/LAYOUT%20CONTA.png){width=250}
+![IMG1](./mobile/assets/images/LAYOUT%20CONTA.png)
 
 ## ➜ FUNÇÕES 1: ₊⊹
 
