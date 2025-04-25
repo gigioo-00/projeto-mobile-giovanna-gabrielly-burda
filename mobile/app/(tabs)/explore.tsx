@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet, Image, Platform, Button } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -12,85 +12,84 @@ export default function TabTwoScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#336ab4', dark: '#336ab4' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
+        <IconSymbol name={'number'} color={''}
         />
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">o que deseja realizar?</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      
+      <Collapsible title="ASSINATURAS">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+        <ThemedText type="defaultSemiBold">Suas assinaturas:</ThemedText>{' '}
+       </ThemedText>
+
+      <Collapsible title="recarregar celular">
+       <Button color={'#004aad'} 
+                onPress={() => {console.log('You tapped the button!');}}
+                title="ver"/>
       </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
+
+      <Collapsible title="Transporte">
+       <Button color={'#004aad'} 
+                onPress={() => {console.log('You tapped the button!');}}
+                title="ver"/>
       </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+
+      <Collapsible title="Straming">
+       <Button color={'#004aad'} 
+                onPress={() => {console.log('You tapped the button!');}}
+                title="ver"/>
       </Collapsible>
-      <Collapsible title="Custom fonts">
-        <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
-          <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
-          </ThemedText>
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+
       </Collapsible>
-      <Collapsible title="Light and dark mode components">
+      <Collapsible title="METAS">
+
         <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user's current color scheme is, and so you can adjust UI colors accordingly.
+        VIAGENS: R$ 500,00
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
         <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText>{' '}
-          library to create a waving hand animation.
+        RESERVA: R$ 700,00
         </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
+        <ThemedText>
+        COMPRAS: R$ 200,00
+        </ThemedText>
+        <ThemedText></ThemedText>
+
+        <Button color={'#004aad'} 
+                onPress={() => {console.log('You tapped the button!');}}
+                title="DEPOSITAR / RETIRAR"/>
       </Collapsible>
+
+      <Collapsible title="TRANSAÇÕES">
+        
+         <ThemedText type="defaultSemiBold">Suas transações:</ThemedText> 
+         <ThemedText></ThemedText>
+         <ThemedText>20/04/2025 - 12:00</ThemedText>
+         <Collapsible title="vizualizar">
+         <ThemedText>Pagamento de R$ 9,00 em Lanchonete XXX no cartão de débito.</ThemedText>
+         </Collapsible>
+         <ThemedText></ThemedText>
+         <ThemedText>21/04/2025 - 13:00</ThemedText>
+         <Collapsible title="vizualizar">
+         <ThemedText>Pagamento de R$ 30,00 para User2 no PIX.</ThemedText>
+         </Collapsible>
+         <ThemedText></ThemedText>
+         <ThemedText>22/04/2025 - 20:00</ThemedText>
+         <Collapsible title="vizualizar">
+         <ThemedText>Pagamento de R$ 100,00 em Restaurante XXX no cartão de débito.</ThemedText>
+         </Collapsible>
+         <ThemedText></ThemedText>
+         <Button color={'#004aad'} 
+                onPress={() => {console.log('You tapped the button!');}}
+                title="ver mais"/>
+      
+      
+        
+        
+      </Collapsible>
+      
+         
     </ParallaxScrollView>
   );
 }
