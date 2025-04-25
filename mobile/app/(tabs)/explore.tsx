@@ -85,7 +85,9 @@ export default function TabTwoScreen() {
                 title="ver mais"/>
       
       
-        
+      <Button color={'#004aad'} 
+                onPress={() => {console.log('You tapped the button!');}}
+                title="DEPOSITAR / RETIRAR"/>
         
       </Collapsible>
       
