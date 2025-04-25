@@ -10,15 +10,29 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#336ab4', dark: '#336ab4' }}
+      headerBackgroundColor={{ light: '#004aad', dark: '#004aad' }}
       headerImage={
         <IconSymbol name={'number'} color={''}
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">o que deseja realizar?</ThemedText>
+        <ThemedText type="title">O que deseja realizar?₊⊹</ThemedText>
       </ThemedView>
       
+      <Collapsible title="CARTÃO DE CRÉDITO">
+
+       <ThemedText>
+       FATURA ATUAL : ****
+      </ThemedText>
+    
+      <ThemedText>
+      LIMITE DISPONÍVEL :  ****
+      </ThemedText>
+      
+
+      </Collapsible>
+
+
       <Collapsible title="ASSINATURAS">
         <ThemedText>
         <ThemedText type="defaultSemiBold">Suas assinaturas:</ThemedText>{' '}
@@ -83,14 +97,20 @@ export default function TabTwoScreen() {
          <Button color={'#004aad'} 
                 onPress={() => {console.log('You tapped the button!');}}
                 title="ver mais"/>
-      
-      
-      <Button color={'#004aad'} 
-                onPress={() => {console.log('You tapped the button!');}}
-                title="DEPOSITAR / RETIRAR"/>
-        
+             
       </Collapsible>
+
       
+
+      <Button color={'#336ab4'} 
+                onPress={() => {console.log('You tapped the button!');}}
+                title="AGÊNCIA DA CONTA                                   >"/>
+
+
+      <Button color={'#336ab4'} 
+                onPress={() => {console.log('You tapped the button!');}}
+                title="SUPORTE                                                       >"/>
+
          
     </ParallaxScrollView>
   );
