@@ -22,7 +22,7 @@ Este projeto tem como principal objetivo criar uma interface de um banco digital
 
 ![IMG3](./mobile/assets/images/BOTÕES%20INÍCIO.png)
 
-*BOTÕES E SUAS FUNÇÕES:* Abaixo do saldo, você encontrará opções para gerenciar seu dinheiro, cada uma com uma função específica:
+*BOTÕES E SUAS FUNÇÕES:* Abaixo do saldo, você encontrará opções para gerenciar seu dinheiro, cada uma com uma função específica,sendo:
 
 *PIX* – Permite transferências rápidas usando chave PIX, QR Code ou CPF/CNPJ.
 
